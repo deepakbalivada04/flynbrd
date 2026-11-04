@@ -7,41 +7,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        sepia: {
-          800: '#432818',
-          900: '#2c1810',
-          950: '#1c0f0a',
+        brand: {
+          50: '#EEF2FF',
+          100: '#E0E7FF',
+          200: '#C7D2FE',
+          500: '#6366F1',
+          600: '#4F46E5',
+          700: '#4338CA',
+          900: '#312E81',
         },
-        brass: {
-          400: '#e5c07b',
-          500: '#c59f4e',
-          600: '#9d7b32',
+        warm: {
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          500: '#F59E0B',
+          600: '#D97706',
         },
-        neon: {
-          cyan: '#00f0ff',
-          purple: '#a855f7',
-          blue: '#3b82f6',
-          amber: '#f59e0b',
-        }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['Fira Code', 'Courier New', 'monospace'],
-        display: ['Orbitron', 'Cinzel', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
       },
-      animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'spin-slow': 'spin 20s linear infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
-        }
+      boxShadow: {
+        'soft-sm': '0 2px 8px -2px rgba(15, 23, 42, 0.05)',
+        'soft-md': '0 6px 18px -4px rgba(15, 23, 42, 0.08)',
+        'soft-lg': '0 12px 32px -6px rgba(15, 23, 42, 0.1)',
+        'soft-xl': '0 20px 48px -10px rgba(15, 23, 42, 0.12)',
       }
     },
   },
   plugins: [],
 }
-
