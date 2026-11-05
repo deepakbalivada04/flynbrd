@@ -7,31 +7,41 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: '#EEF2FF',
-          100: '#E0E7FF',
-          200: '#C7D2FE',
-          500: '#6366F1',
-          600: '#4F46E5',
-          700: '#4338CA',
-          900: '#312E81',
+        ivory: '#F6F0E4',
+        sand: '#EFE6D3',
+        oxblood: {
+          DEFAULT: '#5E1F1C',
+          dark: '#4B1714',
+          light: '#762723',
         },
-        warm: {
-          50: '#FFFBEB',
-          100: '#FEF3C7',
-          500: '#F59E0B',
-          600: '#D97706',
+        turmeric: {
+          DEFAULT: '#C98A22',
+          light: '#DE9F35',
+          dark: '#B0751A',
         },
+        bottlegreen: {
+          DEFAULT: '#1F4236',
+          dark: '#17332A',
+          light: '#285646',
+        },
+        ink: {
+          DEFAULT: '#2A2320',
+          muted: 'rgba(42, 35, 32, 0.8)',
+          subtle: 'rgba(42, 35, 32, 0.6)',
+        },
+        line: '#DCCFB6',
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['Newsreader', 'Georgia', 'serif'],
+        sans: ['"Noto Sans"', '"Noto Sans Telugu"', 'system-ui', '-apple-system', 'sans-serif'],
+        telugu: ['"Noto Sans Telugu"', '"Noto Sans"', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
+      },
+      borderRadius: {
+        'card': '16px',
       },
       boxShadow: {
-        'soft-sm': '0 2px 8px -2px rgba(15, 23, 42, 0.05)',
-        'soft-md': '0 6px 18px -4px rgba(15, 23, 42, 0.08)',
-        'soft-lg': '0 12px 32px -6px rgba(15, 23, 42, 0.1)',
-        'soft-xl': '0 20px 48px -10px rgba(15, 23, 42, 0.12)',
+        'soft': '0 8px 24px rgba(42, 35, 32, 0.06)',
       }
     },
   },

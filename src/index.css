@@ -2,30 +2,222 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-ivory: #F6F0E4;
+  --color-sand: #EFE6D3;
+  --color-oxblood: #5E1F1C;
+  --color-turmeric: #C98A22;
+  --color-bottlegreen: #1F4236;
+  --color-ink: #2A2320;
+  --color-border: #DCCFB6;
+  --shadow-soft: 0 8px 24px rgba(42, 35, 32, 0.06);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #F8FAFC;
-    color: #0F172A;
-    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    background-color: #F6F0E4;
+    color: #2A2320;
+    font-family: 'Noto Sans', 'Noto Sans Telugu', system-ui, sans-serif;
   }
 
   body {
+    background-color: #F6F0E4;
+    color: #2A2320;
+    font-size: 17px;
+    line-height: 1.65;
     overflow-x: hidden;
   }
 
-  /* Clean smooth scrollbar */
+  /* Refined, quiet scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #F1F5F9;
+    background: #F6F0E4;
   }
   ::-webkit-scrollbar-thumb {
-    background: #CBD5E1;
+    background: #DCCFB6;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #94A3B8;
+    background: #C98A22;
+  }
+}
+
+/* Typography Classes */
+.heading-editorial {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.heading-editorial em,
+.heading-editorial .italic-accent {
+  font-style: italic;
+  color: #C98A22;
+}
+
+.label-mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #1F4236;
+  font-weight: 500;
+}
+
+.label-mono-light {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #C98A22;
+  font-weight: 500;
+}
+
+.body-editorial {
+  font-family: 'Noto Sans', 'Noto Sans Telugu', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(42, 35, 32, 0.8);
+  max-width: 60ch;
+}
+
+.body-editorial-light {
+  font-family: 'Noto Sans', 'Noto Sans Telugu', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(246, 240, 228, 0.85);
+  max-width: 60ch;
+}
+
+/* Buttons */
+.btn-primary-oxblood {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5E1F1C;
+  color: #F6F0E4;
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid #5E1F1C;
+  box-shadow: 0 8px 24px rgba(42, 35, 32, 0.06);
+  transition: all 0.2s ease;
+}
+
+.btn-primary-oxblood:hover {
+  background-color: #C98A22;
+  border-color: #C98A22;
+  color: #F6F0E4;
+}
+
+.btn-primary-oxblood:focus-visible {
+  outline: 2px solid #C98A22;
+  outline-offset: 2px;
+}
+
+.btn-secondary-quiet {
+  display: inline-flex;
+  align-items: center;
+  color: #2A2320;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.btn-secondary-quiet::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #C98A22;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.btn-secondary-quiet:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-secondary-quiet:focus-visible {
+  outline: 2px solid #C98A22;
+  outline-offset: 2px;
+}
+
+/* Cards & Containers (No gradients, no glow, single soft shadow) */
+.card-quiet {
+  background-color: #F6F0E4;
+  border: 1px solid #DCCFB6;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(42, 35, 32, 0.06);
+  transition: border-color 0.2s ease;
+}
+
+.card-quiet:hover {
+  border-color: #C98A22;
+}
+
+.card-green {
+  background-color: #17332A;
+  border: 1px solid rgba(220, 207, 182, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: border-color 0.2s ease;
+}
+
+.card-green:hover {
+  border-color: #C98A22;
+}
+
+/* Ticker */
+@keyframes tickerLoop {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: tickerLoop 50s linear infinite;
+}
+
+.ticker-wrap:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+/* Pip Animations (Wave & Blink kept, no speech bubble) */
+@keyframes pipWaveAnim {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-20deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.pip-waving {
+  transform-origin: 65px 150px;
+  animation: pipWaveAnim 1.2s ease-in-out;
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .ticker-track,
+  .pip-waving {
+    animation: none !important;
   }
 }

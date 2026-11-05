@@ -1,0 +1,39 @@
+{
+  "published": false,
+  "status": "draft",
+  "note": "Draft entries for review. Replace with verified quotes before setting published to true.",
+  "reviews": [
+    {
+      "id": 1,
+      "quote": "Our students stopped asking when they could use a computer and started asking when they could build one.",
+      "name": "Lakshmi Devi",
+      "role": "Science Teacher",
+      "location": "Vizianagaram",
+      "initials": "LD"
+    },
+    {
+      "id": 2,
+      "quote": "My son explained neural networks to his grandmother using his rover.",
+      "name": "Suresh Babu",
+      "role": "Parent",
+      "location": "Visakhapatnam",
+      "initials": "SB"
+    },
+    {
+      "id": 3,
+      "quote": "We had no lab and no budget. Within one term, our Class 9 students presented working vision projects.",
+      "name": "Anjali Rao",
+      "role": "Principal",
+      "location": "Hyderabad",
+      "initials": "AR"
+    },
+    {
+      "id": 4,
+      "quote": "The teachers stayed in the room and learned alongside the students.",
+      "name": "Venkata Ramana",
+      "role": "Academic Coordinator",
+      "location": "Visakhapatnam",
+      "initials": "VR"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "brand": {
+    "name": "Flyinbird",
+    "suffix": "AI",
+    "tagline": "AI & Robotics Workshops & Learning Platform"
+  },
+  "hero": {
+    "label": "STEM workshops & learning platform for Andhra Pradesh and Telangana schools",
+    "headline": "Where Indian students learn to *build* AI.",
+    "subline": "Flyinbird conducts hands-on school workshops supported by our dedicated learning management system. We educate school children in AI and robotics differently—giving them the foundation to understand how AI thinks, write code, and build working robots of their own.",
+    "primaryCta": "Book a School Walkthrough",
+    "secondaryCta": "Explore the four projects",
+    "trustLine": "NEP 2020 experiential learning · Interactive LMS access · Instructors verified before deployment"
+  },
+  "ticker": [
+    "Learning Management System",
+    "School Workshops",
+    "How AI Thinks",
+    "Prompting & Code",
+    "Neural Nets",
+    "Sensors & Logic",
+    "Rover Builds",
+    "Robot Kits"
+  ],
+  "whyWeExist": {
+    "label": "Why we exist",
+    "headline": "Technology is changing faster than *our classrooms.*",
+    "body": "Schools are expected to teach future-ready skills under NEP 2020, but most lack a structured way to educate children in real AI. Flyinbird pairs interactive school workshops with a dedicated learning management system to teach AI and robotics in a fundamentally different, hands-on way.",
+    "pullQuote": "Every student, in every classroom, should be able to build the technology they will one day shape."
+  },
+  "howWeWork": {
+    "label": "Our approach",
+    "headline": "A complete programme, with nothing added to your *teachers' workload.*",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Plan.",
+        "description": "Choose a half-day exploration, a full-day intensive, or a multi-week workshop series. We fit the schedule to your timetable."
+      },
+      {
+        "number": "02",
+        "title": "Workshops & LMS.",
+        "description": "Our instructor leads interactive campus workshops while students log into our learning management system for step-by-step guidance, code, and project lessons."
+      },
+      {
+        "number": "03",
+        "title": "Build and present.",
+        "description": "Each student completes a working robot or program and presents it. Faculty can observe, take part, or assess."
+      }
+    ],
+    "callout": {
+      "label": "What sets us apart",
+      "text": "Most AI education teaches software prompts or sells standalone kits. We educate school children differently: we teach how the machine reasons, guide their progress through our learning system, and connect that reasoning directly to physical robotics."
+    }
+  },
+  "projects": {
+    "label": "The four projects",
+    "headline": "Four projects. Each ends with *something a student can show.*",
+    "items": [
+      {
+        "number": "01",
+        "title": "Prompting and Code.",
+        "grades": "Grades 6–12",
+        "summary": "Students write working code snippets and structured prompts on our platform, learning how to guide models and check whether the output is right."
+      },
+      {
+        "number": "02",
+        "title": "How AI Thinks.",
+        "grades": "Grades 9–12",
+        "summary": "Students see how a language model chooses its next word, explore attention and probabilities, and train a simple neural network on classroom data."
+      },
+      {
+        "number": "03",
+        "title": "Space Robotics and Hardware.",
+        "grades": "Grades 3–12, adapted by age",
+        "summary": "Students build a rover that navigates an obstacle course using sensors, motor control, and simple logic inspired by planetary exploration."
+      },
+      {
+        "number": "04",
+        "title": "Robot Kits.",
+        "grades": "Grades 3–12, matched to grade",
+        "summary": "Students assemble and program our robot kits from scratch, connecting software logic from our LMS to physical hardware that moves."
+      }
+    ]
+  },
+  "videoLibrary": {
+    "label": "Learning system",
+    "headline": "Lessons students can return to, *at their own pace.*",
+    "body": "Every enrolled student gets video lessons for each project, plus two guided capstone projects.",
+    "tabs": [
+      { "id": "all", "label": "All" },
+      { "id": "prompting", "label": "Prompting and Code" },
+      { "id": "thinking", "label": "How AI Thinks" },
+      { "id": "space", "label": "Space and Hardware" },
+      { "id": "kits", "label": "Robot Kits" }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "category": "prompting",
+        "tag": "Prompting and Code",
+        "title": "Your First Prompt That Works",
+        "duration": "9 min"
+      },
+      {
+        "id": 2,
+        "category": "prompting",
+        "tag": "Prompting and Code",
+        "title": "Code Snippets You'll Reuse",
+        "duration": "12 min"
+      },
+      {
+        "id": 3,
+        "category": "thinking",
+        "tag": "How AI Thinks",
+        "title": "How a Machine Picks the Next Word",
+        "duration": "10 min"
+      },
+      {
+        "id": 4,
+        "category": "thinking",
+        "tag": "How AI Thinks",
+        "title": "Teaching a Computer to Recognise a Cat",
+        "duration": "14 min"
+      },
+      {
+        "id": 5,
+        "category": "space",
+        "tag": "Space and Hardware",
+        "title": "How a Rover Finds Its Way",
+        "duration": "11 min"
+      },
+      {
+        "id": 6,
+        "category": "space",
+        "tag": "Space and Hardware",
+        "title": "Motors, Torque, and Why Gears Matter",
+        "duration": "8 min"
+      },
+      {
+        "id": 7,
+        "category": "kits",
+        "tag": "Robot Kits",
+        "title": "Assembling Your First Robot",
+        "duration": "15 min"
+      },
+      {
+        "id": 8,
+        "category": "kits",
+        "tag": "Robot Kits",
+        "title": "Debugging a Robot That Won't Move",
+        "duration": "7 min"
+      }
+    ]
+  },
+  "foundingPartners": {
+    "label": "Now onboarding",
+    "headline": "Partner with us from the *first term.*",
+    "body": "We are onboarding a small group of founding schools in Vizianagaram, Visakhapatnam, and Hyderabad. Founding schools receive first-year pricing, LMS access, and direct input into the curriculum.",
+    "button": "Book a School Walkthrough"
+  },
+  "faq": {
+    "label": "Questions from school leaders",
+    "headline": "Questions from *school leaders.*",
+    "items": [
+      {
+        "id": "faq-1",
+        "question": "Do our teachers need coding or robotics knowledge?",
+        "answer": "No. Our instructors conduct every workshop session, from setup to wrap-up, and our learning management system guides each student step-by-step. Your teachers can observe, assist, or co-facilitate."
+      },
+      {
+        "id": "faq-2",
+        "question": "How long are the workshops and how do they fit our timetable?",
+        "answer": "Choose a half-day exploration, a full-day intensive, or a multi-week workshop series. We schedule around your existing periods and holidays."
+      },
+      {
+        "id": "faq-3",
+        "question": "What space or equipment does our campus need?",
+        "answer": "A standard classroom with power sockets and student desks. Our instructors conduct the workshop sessions, bring the hardware components, and provide student accounts for our learning management system."
+      },
+      {
+        "id": "faq-4",
+        "question": "How does the curriculum align with NEP 2020 and state or CBSE boards?",
+        "answer": "Our curriculum follows NEP 2020's experiential learning goals. We provide a syllabus mapping during the walkthrough."
+      },
+      {
+        "id": "faq-5",
+        "question": "What child safety and privacy practices do you follow?",
+        "answer": "Instructors are verified before any visit. Student work and data on our learning platform stay private and secure. Full policy available on request."
+      }
+    ]
+  },
+  "finalCta": {
+    "headline": "Begin with *one classroom.*",
+    "body": "Tell us your grades and cohort size. We will send a custom pilot plan within 24 hours.",
+    "button": "Book a School Walkthrough"
+  },
+  "footer": {
+    "email": "partnerships@flyinbird.ai",
+    "phone": "+91 94921 59421",
+    "cities": "Vizianagaram · Visakhapatnam · Hyderabad",
+    "copyright": "© 2026 Flyinbird AI Technologies Pvt Ltd. All rights reserved."
+  }
+}

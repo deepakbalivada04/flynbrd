@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bot, ArrowRight, Menu, X, Sparkles } from 'lucide-react';
+import { Bot, ArrowRight, Menu, X } from 'lucide-react';
 
 export default function FriendlyNavbar({ onBookClick }) {
   const [scrolled, setScrolled] = useState(false);
@@ -26,127 +26,129 @@ export default function FriendlyNavbar({ onBookClick }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm'
-          : 'bg-white/70 backdrop-blur-sm border-b border-transparent'
+          ? 'bg-[#F6F0E4]/95 backdrop-blur-md border-b border-[#DCCFB6] shadow-soft'
+          : 'bg-[#F6F0E4]/85 backdrop-blur-sm border-b border-[#DCCFB6]/60'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+        
         {/* Brand Logo */}
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center gap-3 cursor-pointer group"
         >
-          <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
-            <Bot className="w-6 h-6" />
+          <div className="w-10 h-10 rounded-xl bg-[#5E1F1C] border border-[#DCCFB6] flex items-center justify-center text-[#F6F0E4] shadow-soft group-hover:bg-[#C98A22] transition-colors">
+            <Bot className="w-5 h-5 stroke-[1.5]" />
           </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold font-display tracking-tight text-slate-900 leading-none">
-              Flyinbird <span className="text-indigo-600">AI</span>
+          <div className="flex flex-col text-left">
+            <span className="text-xl font-serif font-semibold tracking-tight text-[#2A2320] leading-none">
+              Flyinbird <span className="font-serif italic text-[#C98A22]">AI</span>
             </span>
-            <span className="text-[11px] font-medium text-slate-500 mt-1">
-              K-12 Robotics & AI Workshops
+            <span className="label-mono text-[10px] text-[#1F4236] mt-1">
+              AI & Robotics Workshops · Learning Platform
             </span>
           </div>
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#2A2320]">
           <button
-            onClick={() => scrollTo('programs')}
-            className="hover:text-indigo-600 transition-colors"
+            type="button"
+            onClick={() => scrollTo('why-we-exist')}
+            className="hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            Programs
+            Why We Exist
           </button>
           <button
+            type="button"
             onClick={() => scrollTo('how-it-works')}
-            className="hover:text-indigo-600 transition-colors"
+            className="hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            How It Works
+            Our Approach
           </button>
           <button
-            onClick={() => scrollTo('why-us')}
-            className="hover:text-indigo-600 transition-colors"
+            type="button"
+            onClick={() => scrollTo('projects')}
+            className="hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            Why Schools Love Us
+            The Four Projects
           </button>
           <button
-            onClick={() => scrollTo('hardware')}
-            className="hover:text-indigo-600 transition-colors"
+            type="button"
+            onClick={() => scrollTo('learning-system')}
+            className="hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            Hardware Kits
+            Learning System
           </button>
           <button
+            type="button"
             onClick={() => scrollTo('faq')}
-            className="hover:text-indigo-600 transition-colors"
+            className="hover:text-[#C98A22] transition-colors cursor-pointer"
           >
             FAQ
           </button>
         </nav>
 
-        {/* Right CTA */}
-        <div className="hidden sm:flex items-center gap-4">
-          <button
-            onClick={onBookClick}
-            className="px-5 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-100 hover:shadow-indigo-200 transition-all hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
-          >
-            <span>Book a Demo</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-
         {/* Mobile Hamburger Button */}
         <button
+          type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors"
+          className="lg:hidden p-2 rounded-xl text-[#2A2320] hover:bg-[#EFE6D3] transition-colors cursor-pointer"
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-6 h-6 stroke-[1.5]" /> : <Menu className="w-6 h-6 stroke-[1.5]" />}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-6 py-6 flex flex-col gap-4 text-base font-semibold text-slate-700 shadow-xl">
+        <div className="lg:hidden bg-[#F6F0E4] border-b border-[#DCCFB6] px-6 py-6 flex flex-col gap-4 text-base font-medium text-[#2A2320] shadow-soft">
           <button
-            onClick={() => scrollTo('programs')}
-            className="text-left py-2 hover:text-indigo-600 transition-colors"
+            type="button"
+            onClick={() => scrollTo('why-we-exist')}
+            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            Programs
+            Why We Exist
           </button>
           <button
+            type="button"
             onClick={() => scrollTo('how-it-works')}
-            className="text-left py-2 hover:text-indigo-600 transition-colors"
+            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            How It Works
+            Our Approach
           </button>
           <button
-            onClick={() => scrollTo('why-us')}
-            className="text-left py-2 hover:text-indigo-600 transition-colors"
+            type="button"
+            onClick={() => scrollTo('projects')}
+            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            Why Schools Love Us
+            The Four Projects
           </button>
           <button
-            onClick={() => scrollTo('hardware')}
-            className="text-left py-2 hover:text-indigo-600 transition-colors"
+            type="button"
+            onClick={() => scrollTo('learning-system')}
+            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
           >
-            Hardware Kits
+            Learning System
           </button>
           <button
+            type="button"
             onClick={() => scrollTo('faq')}
-            className="text-left py-2 hover:text-indigo-600 transition-colors"
+            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
           >
             FAQ
           </button>
           <div className="pt-2">
             <button
+              type="button"
               onClick={() => {
                 setMobileMenuOpen(false);
                 onBookClick();
               }}
-              className="w-full py-3 rounded-full bg-indigo-600 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-md"
+              className="btn-primary-oxblood w-full py-3 text-sm cursor-pointer"
             >
-              <span>Book a Demo</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Book a School Walkthrough</span>
+              <ArrowRight className="w-4 h-4 ml-2" />
             </button>
           </div>
         </div>
@@ -154,4 +156,3 @@ export default function FriendlyNavbar({ onBookClick }) {
     </header>
   );
 }
-

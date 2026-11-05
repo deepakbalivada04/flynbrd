@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import FriendlyNavbar from './components/friendly/FriendlyNavbar';
-import FriendlyHero from './components/friendly/FriendlyHero';
-import FriendlyStats from './components/friendly/FriendlyStats';
-import FriendlyHowItWorks from './components/friendly/FriendlyHowItWorks';
-import FriendlyPrograms from './components/friendly/FriendlyPrograms';
-import FriendlyWhyUs from './components/friendly/FriendlyWhyUs';
-import FriendlyHardware from './components/friendly/FriendlyHardware';
-import FriendlyFaq from './components/friendly/FriendlyFaq';
-import FriendlyBooking from './components/friendly/FriendlyBooking';
+import HeroSection from './components/friendly/HeroSection';
+import MarqueeTicker from './components/friendly/MarqueeTicker';
+import OurMissionSection from './components/friendly/OurMissionSection';
+import HowWeWorkSection from './components/friendly/HowWeWorkSection';
+import FourProjectsSection from './components/friendly/FourProjectsSection';
+import VideoLibrarySection from './components/friendly/VideoLibrarySection';
+import ReviewsSection from './components/friendly/ReviewsSection';
+import FoundingPartnersSection from './components/friendly/FoundingPartnersSection';
+import FaqSection from './components/friendly/FaqSection';
+import FinalCtaSection from './components/friendly/FinalCtaSection';
 import FriendlyFooter from './components/friendly/FriendlyFooter';
 
 export default function App() {
@@ -23,50 +25,59 @@ export default function App() {
     }
   };
 
-  const scrollToPrograms = () => {
-    const element = document.getElementById('programs');
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-indigo-500 selection:text-white font-sans antialiased">
+    <div className="min-h-screen bg-[#F6F0E4] text-[#2A2320] selection:bg-[#C98A22] selection:text-[#F6F0E4] font-sans antialiased">
       
-      {/* 1. Simple, Clean, Friendly Navbar */}
+      {/* 0. Top Navigation */}
       <FriendlyNavbar onBookClick={() => scrollToBooking()} />
 
-      {/* 2. Main Content Sections */}
-      <main>
-        {/* Friendly Hero with Interactive Grade-Level Project Preview */}
-        <FriendlyHero
-          onBookDemoClick={() => scrollToBooking()}
-          onExploreClick={scrollToPrograms}
+      <main className="pt-20">
+        
+        {/* 1. HERO with Pip character & grade tabs */}
+        <HeroSection
+          onBookClick={() => scrollToBooking()}
+          onExploreProjectsClick={scrollToProjects}
         />
 
-        {/* Key Metrics / Social Proof */}
-        <FriendlyStats />
+        {/* Slow Ticker under the hero */}
+        <MarqueeTicker />
 
-        {/* 3-Step "How It Works" */}
-        <FriendlyHowItWorks onBookClick={() => scrollToBooking()} />
+        {/* 2. WHY WE EXIST: Sand band #EFE6D3 */}
+        <div id="why-we-exist">
+          <OurMissionSection />
+        </div>
 
-        {/* 3 Scaffolded Curricula (Elementary, Middle, High) */}
-        <FriendlyPrograms onSelectTier={(tier) => scrollToBooking(tier)} />
+        {/* 3. HOW WE WORK: Our Approach & Callout (Ivory #F6F0E4) */}
+        <HowWeWorkSection />
 
-        {/* Why Schools & Teachers Love Flyinbird */}
-        <FriendlyWhyUs />
+        {/* 4. THE FOUR PROJECTS: Bottle Green Band #1F4236 with Ivory text */}
+        <FourProjectsSection />
 
-        {/* Inside the Mobile Robotics Lab Kits */}
-        <FriendlyHardware />
+        {/* 5. VIDEO LIBRARY: Learning System Filter Tabs & 8 Cards (Ivory #F6F0E4) */}
+        <VideoLibrarySection />
 
-        {/* Frequently Asked Questions */}
-        <FriendlyFaq />
+        {/* 6. REVIEWS: Hidden until reviews.json has published: true (Sand band #EFE6D3) */}
+        <ReviewsSection />
 
-        {/* Simple & Friendly Consultation / Booking Form */}
-        <FriendlyBooking selectedTier={selectedTier} />
+        {/* 7. FOUNDING PARTNERS: Now Onboarding (Ivory #F6F0E4) */}
+        <FoundingPartnersSection onBookClick={() => scrollToBooking()} />
+
+        {/* 8. FAQ: Bottle Green Band #1F4236 with Ivory text */}
+        <FaqSection />
+
+        {/* 9. FINAL CTA: Begin with one classroom (Sand band #EFE6D3) */}
+        <FinalCtaSection selectedTier={selectedTier} />
+
       </main>
 
-      {/* 3. Clean, Professional Footer */}
+      {/* Footer: Bottle Green Band #1F4236 */}
       <FriendlyFooter />
 
     </div>

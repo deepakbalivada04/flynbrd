@@ -4,66 +4,63 @@ import { PackageCheck, UserCheck, BookOpen, ShieldCheck } from 'lucide-react';
 export default function FriendlyWhyUs() {
   const benefits = [
     {
-      title: '100% Turnkey Delivery',
-      desc: 'No district equipment purchasing or maintenance required. We bring individual robotics trays, offline pre-configured laptops, and all consumable parts.',
-      icon: <PackageCheck className="w-6 h-6 text-indigo-600" />,
-      tag: 'Zero Hardware Cost',
+      num: '01',
+      title: 'No equipment purchase',
+      desc: 'We bring the robotics kits, laptops, and consumables. Nothing for your school to buy or maintain.',
+      icon: <PackageCheck className="w-5 h-5 stroke-[1.5] text-[#0F1B2D]" />,
     },
     {
-      title: 'Zero Teacher Burden',
-      desc: 'Our certified robotics engineers and STEM educators lead setup, direct classroom instruction, and teardown. Your teachers are free to observe or participate.',
-      icon: <UserCheck className="w-6 h-6 text-indigo-600" />,
-      tag: 'Hands-off for Faculty',
+      num: '02',
+      title: 'No teacher training needed',
+      desc: 'Our instructors run every session. Your teachers can observe or join in.',
+      icon: <UserCheck className="w-5 h-5 stroke-[1.5] text-[#0F1B2D]" />,
     },
     {
-      title: 'NGSS & CSTA Aligned',
-      desc: 'Every lesson map connects directly to Next Generation Science Standards (NGSS) engineering criteria and state computer science standards.',
-      icon: <BookOpen className="w-6 h-6 text-indigo-600" />,
-      tag: 'Curriculum Matched',
+      num: '03',
+      title: 'Built to the national framework',
+      desc: "Activities follow NEP 2020's emphasis on experiential and scientific learning.",
+      icon: <BookOpen className="w-5 h-5 stroke-[1.5] text-[#0F1B2D]" />,
     },
     {
-      title: 'District Vetted & Safe',
-      desc: 'Livescan background-checked instructors, comprehensive institutional liability insurance, and 100% student privacy (FERPA/COPPA) compliance.',
-      icon: <ShieldCheck className="w-6 h-6 text-indigo-600" />,
-      tag: 'Full Compliance',
+      num: '04',
+      title: 'Safe by design',
+      desc: 'Instructors are verified before they visit. Student data is kept offline. We will share our full safeguarding policy on request.',
+      icon: <ShieldCheck className="w-5 h-5 stroke-[1.5] text-[#0F1B2D]" />,
     },
   ];
 
   return (
-    <section id="why-us" className="py-20 sm:py-24 bg-slate-50 border-t border-slate-200/80">
+    <section id="why-us" className="py-20 sm:py-24 bg-[#FAF8F3] border-b border-[#E8E4D9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-full">
-            Institutional Peace of Mind
+        <div className="max-w-3xl mb-14 text-left">
+          <span className="font-mono uppercase text-xs tracking-widest text-[#C9A227] block mb-3">
+            [ WHY SCHOOLS CHOOSE US ]
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-display text-slate-900 mt-4 tracking-tight">
-            Why Schools & Districts Love Us
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal tracking-tight text-[#0F1B2D]">
+            A full programme, delivered by us, <span className="font-serif italic text-[#C9A227]">with nothing added</span> to your workload.
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-            Designed specifically for school principals, STEM coordinators, and district administrators who want premium results without headaches.
-          </p>
         </div>
 
         {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7">
           {benefits.map((item, index) => (
             <div
               key={index}
-              className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow flex items-start gap-5"
+              className="p-7 sm:p-8 rounded-2xl bg-white/80 border border-[#E8E4D9] shadow-subtle flex items-start gap-5"
             >
-              <div className="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F3] border border-[#E8E4D9] flex items-center justify-center shrink-0">
                 {item.icon}
               </div>
               <div>
-                <div className="inline-block text-[11px] font-bold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full mb-2">
-                  {item.tag}
+                <div className="font-mono text-xs uppercase tracking-wider text-[#C9A227] mb-1 font-semibold">
+                  {item.num}
                 </div>
-                <h3 className="text-xl font-bold font-display text-slate-900 mb-2">
+                <h3 className="text-xl font-serif font-normal text-[#0F1B2D] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-[17px] text-[#5C6470] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -75,4 +72,3 @@ export default function FriendlyWhyUs() {
     </section>
   );
 }
-
