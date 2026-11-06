@@ -139,7 +139,7 @@ export default function FriendlyFooter() {
               <button
                 type="button"
                 onClick={() => scrollTo('booking')}
-                className="px-5 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold uppercase tracking-wider cursor-pointer flex items-center gap-2 shadow-md shadow-blue-500/20 transition-all"
+                className="px-5 py-2.5 rounded-full bg-[#EE7819] hover:bg-[#d86b14] text-white text-xs font-bold uppercase tracking-wider cursor-pointer flex items-center gap-2 shadow-md shadow-[#EE7819]/20 transition-all"
               >
                 <span>Book Campus Walkthrough</span>
                 <ArrowRight className="w-3.5 h-3.5" />

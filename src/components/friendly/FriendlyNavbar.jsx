@@ -9,7 +9,8 @@ export default function FriendlyNavbar({ onBookClick }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isLearningPathsPage = location.pathname === '/learning-paths';
+  const isNotHome = location.pathname !== '/';
+  const isLearningPathsActive = location.pathname.startsWith('/learning-paths');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +23,7 @@ export default function FriendlyNavbar({ onBookClick }) {
 
   const handleNavClick = (id) => {
     setMobileMenuOpen(false);
-    if (isLearningPathsPage) {
+    if (isNotHome) {
       navigate('/', { state: { scrollToId: id } });
     } else {
       const element = document.getElementById(id);
@@ -33,7 +34,7 @@ export default function FriendlyNavbar({ onBookClick }) {
   };
 
   const handleLogoClick = () => {
-    if (isLearningPathsPage) {
+    if (isNotHome) {
       navigate('/');
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -82,12 +83,12 @@ export default function FriendlyNavbar({ onBookClick }) {
           {/* Dedicated Learning Paths Link */}
           <Link
             to="/learning-paths"
-            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-bold transition-all ${isLearningPathsPage
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-bold transition-all ${isLearningPathsActive
                 ? 'bg-[#EE7819] text-white shadow-sm'
                 : 'bg-slate-100/80 text-slate-800 hover:text-[#EE7819] border border-slate-200 shadow-xs'
               }`}
           >
-            <Sparkles className={`w-3.5 h-3.5 ${isLearningPathsPage ? 'text-white' : 'text-[#EE7819]'}`} />
+            <Sparkles className={`w-3.5 h-3.5 ${isLearningPathsActive ? 'text-white' : 'text-[#EE7819]'}`} />
             <span>Learning Paths</span>
           </Link>
 

@@ -86,7 +86,7 @@ export default function FinalCtaSection({ selectedTier = '' }) {
                   Walkthrough Request Received
                 </h3>
                 <p className="text-slate-600 max-w-md mx-auto text-base">
-                  Thank you, <strong>{formData.name || 'Educator'}</strong>. We will send a customized pilot walkthrough plan for <strong>{formData.schoolName || 'your school'}</strong> within 24 hours.
+                  Thank you, <strong>{formData.name || 'Educator'}</strong>. We will send a customized pilot walkthrough plan for <strong>{formData.schoolName || 'your school'}</strong> within 24 hours. For direct inquiries, write to <a href="mailto:flynbrd.contact@gmail.com" className="text-[#2576BC] font-semibold underline">flynbrd.contact@gmail.com</a>.
                 </p>
                 <div className="pt-4">
                   <button
@@ -254,7 +254,7 @@ export default function FinalCtaSection({ selectedTier = '' }) {
                     <ArrowRight className="w-5 h-5" />
                   </button>
                   <p className="text-center text-xs text-slate-500 mt-3 font-medium">
-                    No hardware purchase required · All equipment and instructors supplied by Flyinbird
+                    No hardware purchase required · All equipment and instructors supplied by Flyinbird · Email: <a href="mailto:flynbrd.contact@gmail.com" className="text-[#2576BC] hover:underline font-semibold">flynbrd.contact@gmail.com</a>
                   </p>
                 </div>
 

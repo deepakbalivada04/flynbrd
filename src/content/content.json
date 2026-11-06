@@ -88,11 +88,26 @@
     "headline": "Lessons students can return to, *at their own pace.*",
     "body": "Every enrolled student gets video lessons for each project, plus two guided capstone projects.",
     "tabs": [
-      { "id": "all", "label": "All" },
-      { "id": "prompting", "label": "Prompting and Code" },
-      { "id": "thinking", "label": "How AI Thinks" },
-      { "id": "space", "label": "Space and Hardware" },
-      { "id": "kits", "label": "Robot Kits" }
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "prompting",
+        "label": "Prompting and Code"
+      },
+      {
+        "id": "thinking",
+        "label": "How AI Thinks"
+      },
+      {
+        "id": "space",
+        "label": "Space and Hardware"
+      },
+      {
+        "id": "kits",
+        "label": "Robot Kits"
+      }
     ],
     "videos": [
       {
@@ -196,7 +211,7 @@
     "button": "Book a School Walkthrough"
   },
   "footer": {
-    "email": "partnerships@flyinbird.ai",
+    "email": "flynbrd.contact@gmail.com",
     "phone": "+91 94921 59421",
     "cities": "Vizianagaram · Visakhapatnam · Hyderabad",
     "copyright": "© 2026 Flyinbird AI Technologies Pvt Ltd. All rights reserved."
