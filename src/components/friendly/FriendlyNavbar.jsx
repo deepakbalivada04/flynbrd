@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Bot, ArrowRight, Menu, X } from 'lucide-react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { ArrowRight, Menu, X, Sparkles } from 'lucide-react';
+import textLogoImg from '../../assets/text_logo.png';
 
 export default function FriendlyNavbar({ onBookClick }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isLearningPathsPage = location.pathname === '/learning-paths';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,86 +20,117 @@ export default function FriendlyNavbar({ onBookClick }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (id) => {
+  const handleNavClick = (id) => {
     setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (isLearningPathsPage) {
+      navigate('/', { state: { scrollToId: id } });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (isLearningPathsPage) {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#F6F0E4]/95 backdrop-blur-md border-b border-[#DCCFB6] shadow-soft'
-          : 'bg-[#F6F0E4]/85 backdrop-blur-sm border-b border-[#DCCFB6]/60'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm'
+          : 'bg-white/85 backdrop-blur-sm border-b border-slate-200/60'
+        }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
-        
-        {/* Brand Logo */}
+      {/* Expanded navbar container with comfortable padding so logo is not too far left */}
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 h-20 flex items-center justify-between gap-4">
+
+        {/* Brand Logo - ONLY text_logo.png, no text, no favicon */}
         <div
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-3 cursor-pointer group"
+          onClick={handleLogoClick}
+          className="flex items-center cursor-pointer group py-1 select-none shrink-0"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#5E1F1C] border border-[#DCCFB6] flex items-center justify-center text-[#F6F0E4] shadow-soft group-hover:bg-[#C98A22] transition-colors">
-            <Bot className="w-5 h-5 stroke-[1.5]" />
-          </div>
-          <div className="flex flex-col text-left">
-            <span className="text-xl font-serif font-semibold tracking-tight text-[#2A2320] leading-none">
-              Flyinbird <span className="font-serif italic text-[#C98A22]">AI</span>
-            </span>
-            <span className="label-mono text-[10px] text-[#1F4236] mt-1">
-              AI & Robotics Workshops · Learning Platform
-            </span>
-          </div>
+          <img
+            src={textLogoImg}
+            alt="Flyinbird AI"
+            className="h-9 sm:h-10 md:h-11 w-auto object-contain object-left transition-transform group-hover:scale-[1.02]"
+          />
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#2A2320]">
+        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600">
           <button
             type="button"
-            onClick={() => scrollTo('why-we-exist')}
-            className="hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('why-we-exist')}
+            className="hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             Why We Exist
           </button>
           <button
             type="button"
-            onClick={() => scrollTo('how-it-works')}
-            className="hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('how-it-works')}
+            className="hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             Our Approach
           </button>
+
+          {/* Dedicated Learning Paths Link */}
+          <Link
+            to="/learning-paths"
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-bold transition-all ${isLearningPathsPage
+                ? 'bg-[#EE7819] text-white shadow-sm'
+                : 'bg-slate-100/80 text-slate-800 hover:text-[#EE7819] border border-slate-200 shadow-xs'
+              }`}
+          >
+            <Sparkles className={`w-3.5 h-3.5 ${isLearningPathsPage ? 'text-white' : 'text-[#EE7819]'}`} />
+            <span>Learning Paths</span>
+          </Link>
+
           <button
             type="button"
-            onClick={() => scrollTo('projects')}
-            className="hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('projects')}
+            className="hover:text-[#2576BC] transition-colors cursor-pointer"
           >
-            The Four Projects
+            Projects
           </button>
           <button
             type="button"
-            onClick={() => scrollTo('learning-system')}
-            className="hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('learning-system')}
+            className="hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             Learning System
           </button>
           <button
             type="button"
-            onClick={() => scrollTo('faq')}
-            className="hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('faq')}
+            className="hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             FAQ
           </button>
         </nav>
 
+        {/* Right CTA Button - Styled in warm Logo Orange */}
+        <div className="hidden lg:flex items-center gap-3 shrink-0">
+          <button
+            type="button"
+            onClick={onBookClick}
+            className="px-5 py-2.5 rounded-full bg-[#EE7819] hover:bg-[#d86b14] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-md shadow-[#EE7819]/25 hover:shadow-lg transition-all hover:-translate-y-0.5 active:translate-y-0"
+          >
+            <span>Book Walkthrough</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
         {/* Mobile Hamburger Button */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-xl text-[#2A2320] hover:bg-[#EFE6D3] transition-colors cursor-pointer"
+          className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6 stroke-[1.5]" /> : <Menu className="w-6 h-6 stroke-[1.5]" />}
@@ -102,39 +139,47 @@ export default function FriendlyNavbar({ onBookClick }) {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#F6F0E4] border-b border-[#DCCFB6] px-6 py-6 flex flex-col gap-4 text-base font-medium text-[#2A2320] shadow-soft">
+        <div className="lg:hidden bg-white border-b border-slate-200 px-6 py-6 flex flex-col gap-3 text-base font-medium text-slate-700 shadow-xl">
           <button
             type="button"
-            onClick={() => scrollTo('why-we-exist')}
-            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('why-we-exist')}
+            className="text-left py-2 hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             Why We Exist
           </button>
           <button
             type="button"
-            onClick={() => scrollTo('how-it-works')}
-            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('how-it-works')}
+            className="text-left py-2 hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             Our Approach
           </button>
+          <Link
+            to="/learning-paths"
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-left py-2 text-[#2576BC] font-bold flex items-center gap-2"
+          >
+            <Sparkles className="w-4 h-4 text-[#533788]" />
+            <span>Dedicated Learning Paths Page</span>
+          </Link>
           <button
             type="button"
-            onClick={() => scrollTo('projects')}
-            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('projects')}
+            className="text-left py-2 hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             The Four Projects
           </button>
           <button
             type="button"
-            onClick={() => scrollTo('learning-system')}
-            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('learning-system')}
+            className="text-left py-2 hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             Learning System
           </button>
           <button
             type="button"
-            onClick={() => scrollTo('faq')}
-            className="text-left py-2 hover:text-[#C98A22] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('faq')}
+            className="text-left py-2 hover:text-[#2576BC] transition-colors cursor-pointer"
           >
             FAQ
           </button>
@@ -145,10 +190,10 @@ export default function FriendlyNavbar({ onBookClick }) {
                 setMobileMenuOpen(false);
                 onBookClick();
               }}
-              className="btn-primary-oxblood w-full py-3 text-sm cursor-pointer"
+              className="w-full py-3 rounded-full bg-[#EE7819] hover:bg-[#d86b14] text-white font-bold text-sm cursor-pointer flex items-center justify-center gap-2 shadow-md shadow-[#EE7819]/25"
             >
               <span>Book a School Walkthrough</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>

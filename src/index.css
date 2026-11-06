@@ -3,94 +3,93 @@
 @tailwind utilities;
 
 :root {
-  --color-ivory: #F6F0E4;
-  --color-sand: #EFE6D3;
-  --color-oxblood: #5E1F1C;
-  --color-turmeric: #C98A22;
-  --color-bottlegreen: #1F4236;
-  --color-ink: #2A2320;
-  --color-border: #DCCFB6;
-  --shadow-soft: 0 8px 24px rgba(42, 35, 32, 0.06);
+  --color-brand: #2563EB;
+  --color-brand-hover: #1D4ED8;
+  --color-navy: #0F172A;
+  --color-slate-subtle: #F8FAFC;
+  --color-border: #E2E8F0;
+  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #F6F0E4;
-    color: #2A2320;
-    font-family: 'Noto Sans', 'Noto Sans Telugu', system-ui, sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
   }
 
   body {
-    background-color: #F6F0E4;
-    color: #2A2320;
-    font-size: 17px;
-    line-height: 1.65;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-size: 16px;
+    line-height: 1.6;
     overflow-x: hidden;
   }
 
-  /* Refined, quiet scrollbar */
+  /* Clean, modern scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #F6F0E4;
+    background: #F1F5F9;
   }
   ::-webkit-scrollbar-thumb {
-    background: #DCCFB6;
+    background: #CBD5E1;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #C98A22;
+    background: #94A3B8;
   }
 }
 
 /* Typography Classes */
 .heading-editorial {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
+  font-family: 'Plus Jakarta Sans', Inter, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
 }
 
 .heading-editorial em,
 .heading-editorial .italic-accent {
-  font-style: italic;
-  color: #C98A22;
+  font-style: normal;
+  color: #2563EB;
+  font-weight: 700;
 }
 
 .label-mono {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: #1F4236;
-  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #2563EB;
+  font-weight: 600;
 }
 
 .label-mono-light {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: #C98A22;
-  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #60A5FA;
+  font-weight: 600;
 }
 
 .body-editorial {
-  font-family: 'Noto Sans', 'Noto Sans Telugu', sans-serif;
-  font-size: 17px;
+  font-family: 'Plus Jakarta Sans', Inter, sans-serif;
+  font-size: 16px;
   line-height: 1.65;
-  color: rgba(42, 35, 32, 0.8);
-  max-width: 60ch;
+  color: #475569;
+  max-width: 65ch;
 }
 
 .body-editorial-light {
-  font-family: 'Noto Sans', 'Noto Sans Telugu', sans-serif;
-  font-size: 17px;
+  font-family: 'Plus Jakarta Sans', Inter, sans-serif;
+  font-size: 16px;
   line-height: 1.65;
-  color: rgba(246, 240, 228, 0.85);
-  max-width: 60ch;
+  color: #94A3B8;
+  max-width: 65ch;
 }
 
 /* Buttons */
@@ -98,32 +97,34 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #5E1F1C;
-  color: #F6F0E4;
-  font-weight: 500;
+  background-color: #2563EB;
+  color: #FFFFFF;
+  font-weight: 600;
   padding: 0.75rem 1.75rem;
   border-radius: 9999px;
-  border: 1px solid #5E1F1C;
-  box-shadow: 0 8px 24px rgba(42, 35, 32, 0.06);
+  border: 1px solid #2563EB;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
   transition: all 0.2s ease;
 }
 
 .btn-primary-oxblood:hover {
-  background-color: #C98A22;
-  border-color: #C98A22;
-  color: #F6F0E4;
+  background-color: #1D4ED8;
+  border-color: #1D4ED8;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
 }
 
 .btn-primary-oxblood:focus-visible {
-  outline: 2px solid #C98A22;
+  outline: 2px solid #2563EB;
   outline-offset: 2px;
 }
 
 .btn-secondary-quiet {
   display: inline-flex;
   align-items: center;
-  color: #2A2320;
-  font-weight: 500;
+  color: #475569;
+  font-weight: 600;
   position: relative;
   transition: color 0.2s ease;
 }
@@ -134,11 +135,15 @@
   bottom: -2px;
   left: 0;
   width: 100%;
-  height: 1.5px;
-  background-color: #C98A22;
+  height: 2px;
+  background-color: #2563EB;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s ease;
+}
+
+.btn-secondary-quiet:hover {
+  color: #0F172A;
 }
 
 .btn-secondary-quiet:hover::after {
@@ -146,33 +151,34 @@
 }
 
 .btn-secondary-quiet:focus-visible {
-  outline: 2px solid #C98A22;
+  outline: 2px solid #2563EB;
   outline-offset: 2px;
 }
 
-/* Cards & Containers (No gradients, no glow, single soft shadow) */
+/* Cards & Containers */
 .card-quiet {
-  background-color: #F6F0E4;
-  border: 1px solid #DCCFB6;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(42, 35, 32, 0.06);
-  transition: border-color 0.2s ease;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  transition: all 0.2s ease;
 }
 
 .card-quiet:hover {
-  border-color: #C98A22;
+  border-color: #93C5FD;
+  box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.08);
 }
 
 .card-green {
-  background-color: #17332A;
-  border: 1px solid rgba(220, 207, 182, 0.2);
+  background-color: #0F172A;
+  border: 1px solid #1E293B;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transition: border-color 0.2s ease;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
 }
 
 .card-green:hover {
-  border-color: #C98A22;
+  border-color: #3B82F6;
 }
 
 /* Ticker */
@@ -191,7 +197,7 @@
   animation-play-state: paused;
 }
 
-/* Pip Animations (Wave & Blink kept, no speech bubble) */
+/* Pip Animations */
 @keyframes pipWaveAnim {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(-20deg); }
@@ -205,7 +211,7 @@
   animation: pipWaveAnim 1.2s ease-in-out;
 }
 
-/* Accessibility: Prefers Reduced Motion */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

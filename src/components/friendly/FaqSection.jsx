@@ -12,21 +12,20 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="bg-[#1F4236] text-[#F6F0E4] py-20 md:py-28 px-4 sm:px-6 lg:px-8 border-b border-[#DCCFB6]/20">
+    <section id="faq" className="bg-slate-50 text-slate-900 py-20 md:py-28 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
       <div className="max-w-4xl mx-auto text-left">
         
         {/* Header */}
         <div className="mb-14">
           <FadeIn delay={0}>
-            <div className="label-mono-light mb-3 text-[#C98A22]">
+            <div className="text-xs font-mono uppercase tracking-wider mb-3 text-[#533788] font-bold">
               Frequently Asked Questions
             </div>
           </FadeIn>
           
           <FadeIn delay={80}>
-            <h2 className="heading-editorial text-3xl sm:text-4xl md:text-5xl text-[#F6F0E4]">
-              Questions from{' '}
-              <em className="italic text-[#C98A22] font-serif">school leaders.</em>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
+              Questions from <span className="text-[#533788]">school leaders.</span>
             </h2>
           </FadeIn>
         </div>
@@ -40,22 +39,22 @@ export default function FaqSection() {
 
             return (
               <FadeIn key={item.id} delay={idx * 60}>
-                <div className="rounded-xl border border-[#DCCFB6]/25 bg-[#17332A] overflow-hidden transition-colors">
+                <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:border-[#533788]/30 transition-colors">
                   <button
                     type="button"
                     id={headingId}
                     aria-controls={panelId}
                     aria-expanded={isOpen}
                     onClick={() => toggleAccordion(item.id)}
-                    className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-[#C98A22]"
+                    className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#533788]"
                   >
-                    <span className="font-serif text-lg sm:text-xl text-[#F6F0E4] font-medium pr-2">
+                    <span className="text-lg sm:text-xl text-slate-900 font-bold pr-2">
                       {item.question}
                     </span>
                     <span 
                       aria-hidden="true"
-                      className={`w-8 h-8 rounded-full border border-[#DCCFB6]/30 flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 bg-[#C98A22] text-[#1F4236]' : 'bg-[#1F4236] text-[#F6F0E4]'
+                      className={`w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 bg-[#533788] text-white border-[#533788]' : 'bg-slate-100 text-slate-600'
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -67,7 +66,7 @@ export default function FaqSection() {
                       id={panelId}
                       role="region"
                       aria-labelledby={headingId}
-                      className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 body-editorial-light text-base leading-relaxed border-t border-[#DCCFB6]/20"
+                      className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 text-slate-600 text-base leading-relaxed border-t border-slate-100"
                     >
                       {item.answer}
                     </div>
