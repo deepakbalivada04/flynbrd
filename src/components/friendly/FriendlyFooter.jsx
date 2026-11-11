@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
+import { Mail, MapPin, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
 import content from '../../content/content.json';
 import faviconImg from '../../assets/favicon.png';
 import textLogoImg from '../../assets/text_logo.png';
@@ -9,7 +9,7 @@ export default function FriendlyFooter() {
   const navigate = useNavigate();
   const location = useLocation();
   const isLearningPathsPage = location.pathname === '/learning-paths';
-  const { email, phone, cities, copyright } = content.footer;
+  const { email, cities, copyright } = content.footer;
 
   const scrollTo = (id) => {
     if (isLearningPathsPage) {
@@ -121,12 +121,6 @@ export default function FriendlyFooter() {
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
                 <a href={`mailto:${email}`} className="hover:text-white transition-colors">
                   {email}
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href={`tel:${phone.replace(/\s+/g, '')}`} className="hover:text-white transition-colors">
-                  {phone}
                 </a>
               </li>
               <li className="flex items-start gap-2.5">

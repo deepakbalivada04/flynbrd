@@ -86,7 +86,7 @@ export default function FinalCtaSection({ selectedTier = '' }) {
                   Walkthrough Request Received
                 </h3>
                 <p className="text-slate-600 max-w-md mx-auto text-base">
-                  Thank you, <strong>{formData.name || 'Educator'}</strong>. We will send a customized pilot walkthrough plan for <strong>{formData.schoolName || 'your school'}</strong> within 24 hours. For direct inquiries, write to <a href="mailto:flynbrd.contact@gmail.com" className="text-[#2576BC] font-semibold underline">flynbrd.contact@gmail.com</a>.
+                  Thank you, <strong>{formData.name || 'Educator'}</strong>. We will send a customized pilot walkthrough plan for <strong>{formData.schoolName || 'your school'}</strong> within 24 hours. For direct inquiries, write to <a href="mailto:info@flynbrd.com" className="text-[#2576BC] font-semibold underline">info@flynbrd.com</a>.
                 </p>
                 <div className="pt-4">
                   <button
@@ -201,7 +201,7 @@ export default function FinalCtaSection({ selectedTier = '' }) {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 94921 59421"
+                      placeholder="+91 98765 43210"
                       className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all shadow-xs"
                     />
                   </div>
@@ -254,7 +254,7 @@ export default function FinalCtaSection({ selectedTier = '' }) {
                     <ArrowRight className="w-5 h-5" />
                   </button>
                   <p className="text-center text-xs text-slate-500 mt-3 font-medium">
-                    No hardware purchase required · All equipment and instructors supplied by Flyinbird · Email: <a href="mailto:flynbrd.contact@gmail.com" className="text-[#2576BC] hover:underline font-semibold">flynbrd.contact@gmail.com</a>
+                    No hardware purchase required · All equipment and instructors supplied by Flyinbird · Email: <a href="mailto:info@flynbrd.com" className="text-[#2576BC] hover:underline font-semibold">info@flynbrd.com</a>
                   </p>
                 </div>
 
