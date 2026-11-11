@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Homepage -->
+  <url>
+    <loc>https://flynbrd.com/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Learning Paths Main Catalog -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Track: Artificial Intelligence (Under the Hood) -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/artificial-intelligence</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: 3D Printing & Prototyping -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/3d-printing-prototyping</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: Space and Astronomy -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/space-astronomy</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: IoT (Internet of Things) -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/iot-internet-of-things</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: Robotics (Kit Development) -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/robotics-kit-development</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: Prompt Engineering -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/prompt-engineering</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: Using AI (Everyday Tools) -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/using-ai-everyday-tools</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: Coding (Software Engineering) -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/coding-software-engineering</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Track: Circuit Designing & PCB -->
+  <url>
+    <loc>https://flynbrd.com/learning-paths/circuit-designing-pcb</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
