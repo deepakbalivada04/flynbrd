@@ -46,7 +46,7 @@ export default function LearningPathsPage() {
   }, [searchQuery, selectedGrade]);
 
   const handleBookWalkthrough = () => {
-    navigate('/', { state: { scrollToBooking: true } });
+    navigate('/book-demo');
   };
 
   return (

@@ -41,6 +41,17 @@ export default function FriendlyNavbar({ onBookClick }) {
     }
   };
 
+  const handleBookDemoAction = () => {
+    setMobileMenuOpen(false);
+    if (location.pathname === '/book-demo') {
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    } else if (onBookClick) {
+      onBookClick();
+    } else {
+      navigate('/book-demo');
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
@@ -119,10 +130,10 @@ export default function FriendlyNavbar({ onBookClick }) {
         <div className="hidden lg:flex items-center gap-3 shrink-0">
           <button
             type="button"
-            onClick={onBookClick}
+            onClick={handleBookDemoAction}
             className="px-5 py-2.5 rounded-full bg-[#EE7819] hover:bg-[#d86b14] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-md shadow-[#EE7819]/25 hover:shadow-lg transition-all hover:-translate-y-0.5 active:translate-y-0"
           >
-            <span>Book Walkthrough</span>
+            <span>Book a Live Demo</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -187,13 +198,10 @@ export default function FriendlyNavbar({ onBookClick }) {
           <div className="pt-2">
             <button
               type="button"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onBookClick();
-              }}
+              onClick={handleBookDemoAction}
               className="w-full py-3 rounded-full bg-[#EE7819] hover:bg-[#d86b14] text-white font-bold text-sm cursor-pointer flex items-center justify-center gap-2 shadow-md shadow-[#EE7819]/25"
             >
-              <span>Book a School Walkthrough</span>
+              <span>Book a Live Demo</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

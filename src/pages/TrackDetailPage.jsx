@@ -55,7 +55,7 @@ export default function TrackDetailPage() {
   }, [track]);
 
   const handleBookWalkthrough = () => {
-    navigate('/', { state: { bookingTier: track?.title || 'School STEM Residency' } });
+    navigate('/book-demo', { state: { bookingTier: track?.title || 'School STEM Residency' } });
   };
 
   if (!track) {
